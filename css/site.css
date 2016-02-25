@@ -1,0 +1,51 @@
+﻿body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111111;
+}
+
+.header{
+    padding:5px;
+    text-align: center;
+    background-color: #353434;
+    color: #f1efef;
+    font-size: 1.4em;
+}
+
+.allContent {
+    margin-top:20px;
+}
+
+.gold{
+    color: gold;
+}
+
+.silver{
+    color:silver;
+}
+
+.gsbNav {
+    border: 1px solid #8d8d8d; 
+    border-radius: 3px;
+}
+
+.contentBlock {
+    min-height: 450px;
+    border: 1px solid #8d8d8d; 
+    border-radius: 3px;
+    width:98%;
+}
+
+.contentImage {
+    width:34%;
+    display:inline-block;
+}
+
+.contentDescription{
+    width:65%;
+    display:inline-block;
+}
+
+.logo{
+    margin-left: 50px;
+}
+
