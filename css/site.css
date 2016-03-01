@@ -1,14 +1,26 @@
-﻿body{
-    font-family: Arial, Helvetica, sans-serif;
+﻿@font-face{ 
+	font-family: RobotoCondensed;
+	src: url('RobotoCondensed-Regular.ttf') format('truetype');
+}
+
+body{
+    font-family: RobotoCondensed, Arial, Helvetica, sans-serif;
     color: #111111;
+}
+
+.logoImg{
+    width:36px; 
+    height: 36px; 
+    margin-right:2px; 
+    margin-bottom:5px;
 }
 
 .header{
     padding:5px;
-    text-align: center;
+    padding-left: 100px;
     background-color: #353434;
     color: #f1efef;
-    font-size: 1.4em;
+    font-size: 2.5em;
 }
 
 .allContent {
@@ -23,29 +35,71 @@
     color:silver;
 }
 
+.gsbNav a{
+    border-radius: 3px;
+   
+}
+
+.productNav {
+    display: inline-block;
+
+}
+
+.gsbNav .menuItems a{
+     color: azure;
+}
+
+.gsbNav .menuItems .active a:hover {
+    background-color: blue;
+}
+
+.gsbNav .menuItems  a:hover {
+    background-color: red;
+}
+
 .gsbNav {
-    border: 1px solid #8d8d8d; 
+    background-color: gray;
     border-radius: 3px;
 }
 
+.gsbNav .menuItems .active {
+    background-color: red;
+}
+
+.mainRow{
+    margin-top:15px;
+}
+
 .contentBlock {
-    min-height: 450px;
+
     border: 1px solid #8d8d8d; 
     border-radius: 3px;
     width:98%;
 }
+.addToCart{
+    text-align:center;
+    padding-top:15px;
+}
 
 .contentImage {
-    width:34%;
     display:inline-block;
+    margin-right:10px;
 }
 
 .contentDescription{
-    width:65%;
-    display:inline-block;
+    margin:5px;
+}
+
+.siteContent{
+    margin-right:10px;
 }
 
 .logo{
-    margin-left: 50px;
+    margin-left: 60px;
+    width:100px;
 }
 
+.contentTitle{
+    font-size:1.2em;
+    font-weight: bold;
+}

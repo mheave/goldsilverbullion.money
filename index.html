@@ -3,68 +3,177 @@
     <title>Test page</title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/site.css" rel="stylesheet" />
+    <script src="js/jquery-1.12.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div class="header"><span class="gold">Gold</span><span class="silver">Silver</span>Bullion.money</div>
+    <div class="header"><img src="images/logoPreCoin.png" class="logoImg"/> <span class="gold">Gold</span><span class="silver">Silver</span>Bullion.money</div>
     
-    <div class="row allContent">
-        <div class="col-lg-1"></div>
-        <div class="col-lg-2">
+    <div class="row mainRow">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-2">
             <div class="gsbNav">
-                <ul class="nav nav-pills nav-stacked">
-                    <li role="presentation"><a href="#">Home</a></li>
-                    <li role="presentation" class="active"><a href="#">Silver coins</a></li>
-                    <li role="presentation"><a href="#">Silver bars</a></li>
-                    <li role="presentation"><a href="#">Gold coins</a></li>
-                    <li role="presentation"><a href="#">Gold bars</a></li>
-                    <li role="presentation"><a href="#">FAQ</a></li>
-                    <li role="presentation"><a href="#"><span class="glyphicon glyphicon-phone"></span> Contact us</a></li>
+                <ul class="nav nav-pills nav-stacked menuItems">
+                    <li role="presentation" id="menuItem_home"><a href="#" onclick="showPage('home')"><span class="glyphicon glyphicon-home"></span> Home </a></li>
+                    <li role="presentation" id="menuItem_silvercoins" onclick="showPage('silvercoins')"><a href="#"><span class="glyphicon glyphicon-record"></span> Silver coins</a></li>
+                    <li role="presentation" id="menuItem_silverbars"><a href="#" onclick="showPage('silverbars')"><span class="glyphicon glyphicon-align-justify"></span> Silver bars</a></li>
+                    <li role="presentation" id="menuItem_goldcoins"><a href="#" onclick="showPage('goldcoins')"><span class="glyphicon glyphicon-record"></span> Gold coins</a></li>
+                    <li role="presentation" id="menuItem_goldbars"><a href="#" onclick="showPage('goldbars')"><span class="glyphicon glyphicon-align-justify"></span> Gold bars</a></li>
+                    <li role="presentation" id="menuItem_faq"><a href="#" onclick="showPage('faq')"><span class="glyphicon glyphicon-question-sign"></span> FAQ</a></li>
+                    <li role="presentation" id="menuItem_contactus"><a href="#" onclick="showPage('contactus')"><span class="glyphicon glyphicon-phone"></span> Contact us</a></li>
                 </ul>
             </div>
         </div>
-        <div class="col-lg-9">
-            <div id="mainContent">
-                <div id="silverCoin" class="contentBlock">
-                    <div class="contentImage">
-                        <img src="images/canadianMapleLeaf.jpg" /> 
-                    </div>
-                    <div class="contentDescription">
-                        <h3>Silver coin</h3>
-                        <p>some shiz about coin</p>
-                    </div>
-                </div>
 
-                <!--<p>&nbsp;</p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-
-                <p>&nbsp;</p>
-
-                <div id="homePage" class="contentBlock">
-                    <div class="contentImage">
-                        <div class="alert alert-danger"></div>
-                    </div>
-                    <div class="contentDescription">
-                        <div class="alert alert-success"></div>
-                    </div>
-                </div>-->
-
+        <div class="col-sm-9">
+            <div id="home" class="siteContent">
+                <div class="jumbotron"> 
+                <h1>Welcome to GoldSilverBullion.money</h1> <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p> <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p> </div>
             </div>
 
-        </div>
+            <div id="silvercoins" class="siteContent">
+                <div class="panel panel-default">
+                    <div class="panel-heading contentTitle">Silver coins</div>
+                    <div class="panel-body">
+                          <div class="contentImage">
+                            <a href="#" onclick="showPage('canadianMapleLeaf')"><img src="images/canadianMapleLeaf.png" /> </a><br />
+                            <div class="addToCart"><img src="images/buyNowButton.png" /></div>
+                            
+                        </div>
+                        <div class="contentImage">
+                            <a href="#" onclick="showPage('britannia')"><img src="images/britannia.png" /> </a><br />
 
+                         
+                            <div class="addToCart"><img src="images/buyNowButton.png" /></div>
+                        </div>
+                        <div class="contentImage">
+                            <a href="#" onclick="showPage('austrianPhily')"><img src="images/austrianPhily.png" /> </a><br />  
+                            <div class="addToCart"><img src="images/buyNowButton.png" /></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="canadianMapleLeaf" class="siteContent">
+                <div class="panel panel-default">
+                    <div class="panel-heading contentTitle">Canadian maple leaf</div>
+                    <div class="panel-body">
+                        <div style="display:inline-block;">
+                            <img src="images/canadianMapleLeaf.png" />
+                        </div>
+                        <div style="display:inline-block;">
+                            <div class="well-sm">
+                                <h3>Canadian maple leaf</h3>
+                                <p>1 ounce of pure 99.99 silver (31.1g). One of the most popular bullion coins in the world from the Royal Canadian mint.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>       
+
+            <div id="britannia" class="siteContent">
+                <div class="panel panel-default">
+                    <div class="panel-heading contentTitle">Britannia</div>
+                    <div class="panel-body">
+                        <div style="display:inline-block;">
+                            <img src="images/britannia.png" />
+                        </div>
+                        <div style="display:inline-block;">
+                            <div class="well-sm">
+                                <h3>2015 fine silver Britannia</h3>
+                                <p>The Silver Britannia is our most popular coin with UK based investors wishing to benefit from its status as Capital gains tax free.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+
+            <div id="austrianPhily" class="siteContent">
+                <div class="panel panel-default">
+                    <div class="panel-heading contentTitle">Austrian Vienna Philharmonic</div>
+                    <div class="panel-body">
+                        <div style="display:inline-block;">
+                            <img src="images/austrianPhily.png" />
+                        </div>
+                        <div style="display:inline-block;">
+                            <div class="well-sm">
+                                <h3>Austrian Silver Philharmonic</h3>
+                                <p>The austrian philharmonic is a smart addition to any portfolio. Internationally recognised for purity.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+
+            <div id="silverbars" class="siteContent">
+                <div class="panel panel-default">
+                    <div class="panel-heading contentTitle">Silver bars</div>
+                    <div class="panel-body">
+                        <div class="contentDescription">
+
+                            Some shit aboooooooooot silver.
+
+                        </div>
+                        <div class="contentImage">
+                            <img src="images/canadianMapleLeaf.jpg" />
+                        </div>
+                        <div class="contentImage">
+                            <img src="images/britannia.jpg" />
+                        </div>
+                        <div class="contentImage">
+                            <img src="images/austrianPhily.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="goldcoins" class="siteContent">
+                <div class="alert alert-info">Coming soon</div>
+            </div>
+
+            <div id="goldbars" class="siteContent">
+                <div class="alert alert-info">Coming soon</div>
+            </div>
+
+            <div id="faq" class="siteContent">
+                <div class="alert alert-info">Coming soon</div>
+            </div>
+
+            <div id="contactus" class="siteContent">
+                <div class="alert alert-info">Coming soon</div>
+            </div>
+        </div>
 
     </div>
 
     <div class="row">
         <div class="col-lg-3"></div>
-        <div class="col-lg-9"><img src="images/logos/hereusLogo.png" class="logo"/>
-        <img src="images/logos/pampLogo.png"  class="logo"/>
-        <img src="images/logos/royalCanMintLogo.png" class="logo"/>
-        <img src="images/logos/umicoreLogo.png" class="logo"/>
-        <img src="images/logos/metalorLogo.png" class="logo"/></div>
+        <div class="col-lg-9">
+            <img src="images/logos/hereusLogo.png" class="logo" />
+            <img src="images/logos/pampLogo.png" class="logo" />
+            <img src="images/logos/royalCanMintLogo.png" class="logo" />
+            <img src="images/logos/umicoreLogo.png" class="logo" />
+            <img src="images/logos/metalorLogo.png" class="logo" />
+        </div>
         <div class="col-lg-5"></div>
     </div>
+                <script type="text/javascript">
+
+                    function showPage(pageName) {
+                        console.log(pageName);
+                        $('.gsbNav li').removeClass('active');
+                        $('.siteContent').addClass('hidden');
+                        $('#' + pageName).removeClass('hidden');
+                        $('#menuItem_' + pageName).addClass('active');
+                    }
+
+                    $('.siteContent').addClass('hidden');
+                    $('.gsbNav li').removeClass('active');
+                    (function () {
+                        showPage('home');
+                    })();
+
+                </script>
 </body>        
 </html>
 
